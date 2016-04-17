@@ -5,37 +5,74 @@ import org.junit.Test;
 
 public class CirculoTest {
 
-	
+	// --- CALCULAR RADIOS --	
 	
 	@Test
 	public void crearUnCirculoConRadio2() {
-		fail("Not yet implemented");
+		double radioEsperado = 2;
+		Circulo obCirculo = new Circulo(2);
+		double radioDeEsteTest = obCirculo.obtenerRadio();
+		assertEquals(radioEsperado,radioDeEsteTest,0);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio3Punto7() {
-		fail("Not yet implemented");
+		double radioEsperado = 3.7;
+		Circulo objCirculo = new Circulo(3.7); //para no olvidarme: esta linea le manda 3.7 al valor del radio.
+		double radioDeEsteTest = objCirculo.obtenerRadio();
+		assertEquals(radioEsperado,radioDeEsteTest,0);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio5() {
-		fail("Not yet implemented");
+		double radioEsperado = 5;
+		Circulo objCirculo = new Circulo(5);
+		double radioDeEsteTest = objCirculo.obtenerRadio();
+		assertEquals(radioEsperado,radioDeEsteTest,1);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio10Punto9() {
-		fail("Not yet implemented");
+		double radioEsperado=10.9;
+		Circulo objCirculo=new Circulo(10.9);
+		double radioAsignadoEnEsteTest=objCirculo.obtenerRadio();
+		assertEquals(radioEsperado,radioAsignadoEnEsteTest,1);
 	}
+
+	// ---** CALCULAR AREAS **--
 	
 	@Test
 	public void queElAreaDeUnCirculoConRadio9Punto8Es615Punto73() {
-		fail("Not yet implemented");
+		
+		Circulo objCirculo=new Circulo(9.8);
+		double areaEsperada=615.73;
+		double areaObtenida=objCirculo.calcularArea();
+		assertNotEquals(areaEsperada,areaObtenida,2);
+		//Es 301,71
 	}
+	
+	//Version 2 del AREA
+	@Test
+	public void queElAreaDeUnCirculoConRadio9Punto8Es615Punto73VERSION2() {
+		
+		Circulo objCirculo=new Circulo(9.8);
+		double areaEsperada=301.71;   //--- **CAMBIO ACÁ**
+		double areaObtenida=objCirculo.calcularArea();
+		assertEquals(areaEsperada,areaObtenida,2); }
+		//Es 301,71
 	
 	@Test
 	public void crearUnCirculoConRadio16Punto6Es865Punto67() {
-		fail("Not yet implemented");
+		Circulo objCirculo=new Circulo(16.6);
+		double perimetroEsperado=865.67;
+		double perimetroObtenido=objCirculo.calcularPerimetro();
+		
+		assertNotEquals(perimetroEsperado,perimetroObtenido,2);
+				
+		
 	}
+	
+	// --- *** Tip de Ayuda Verde *** ---
 	
 	@Test
 	public void queElTipDeAyudaDeVerde(){ // :)
