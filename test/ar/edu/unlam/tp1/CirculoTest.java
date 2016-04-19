@@ -5,20 +5,19 @@ import org.junit.Test;
 
 public class CirculoTest {
 
-	// --- CALCULAR RADIOS --	
-	
+		
 	@Test
 	public void crearUnCirculoConRadio2() {
 		double radioEsperado = 2;
 		Circulo obCirculo = new Circulo(2);
-		double radioDeEsteTest = obCirculo.obtenerRadio();
+		Double radioDeEsteTest = obCirculo.obtenerRadio();
 		assertEquals(radioEsperado,radioDeEsteTest,0);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio3Punto7() {
 		double radioEsperado = 3.7;
-		Circulo objCirculo = new Circulo(3.7); //para no olvidarme: esta linea le manda 3.7 al valor del radio.
+		Circulo objCirculo = new Circulo(3.7); 
 		double radioDeEsteTest = objCirculo.obtenerRadio();
 		assertEquals(radioEsperado,radioDeEsteTest,0);
 	}
@@ -28,7 +27,7 @@ public class CirculoTest {
 		double radioEsperado = 5;
 		Circulo objCirculo = new Circulo(5);
 		double radioDeEsteTest = objCirculo.obtenerRadio();
-		assertEquals(radioEsperado,radioDeEsteTest,1);
+		assertEquals(radioEsperado,radioDeEsteTest,0);
 	}
 	
 	@Test
@@ -36,43 +35,29 @@ public class CirculoTest {
 		double radioEsperado=10.9;
 		Circulo objCirculo=new Circulo(10.9);
 		double radioAsignadoEnEsteTest=objCirculo.obtenerRadio();
-		assertEquals(radioEsperado,radioAsignadoEnEsteTest,1);
+		assertEquals(radioEsperado,radioAsignadoEnEsteTest,0.0);
 	}
 
-	// ---** CALCULAR AREAS **--
-	
+		
 	@Test
-	public void queElAreaDeUnCirculoConRadio9Punto8Es615Punto73() {
+	public void queElAreaDeUnCirculoConRadio9Punto8Es301Punto71() {
 		
 		Circulo objCirculo=new Circulo(9.8);
-		double areaEsperada=615.73;
+		double areaEsperada=301.71;  
 		double areaObtenida=objCirculo.calcularArea();
-		assertNotEquals(areaEsperada,areaObtenida,2);
-		//Es 301,71
-	}
-	
-	//Version 2 del AREA
-	@Test
-	public void queElAreaDeUnCirculoConRadio9Punto8Es615Punto73VERSION2() {
+		assertEquals(areaEsperada,areaObtenida,0.01); }
 		
-		Circulo objCirculo=new Circulo(9.8);
-		double areaEsperada=301.71;   //--- **CAMBIO ACÁ**
-		double areaObtenida=objCirculo.calcularArea();
-		assertEquals(areaEsperada,areaObtenida,2); }
-		//Es 301,71
 	
 	@Test
-	public void crearUnCirculoConRadio16Punto6Es865Punto67() {
+	public void queElPerimetroDeUnCirculoConRadio16Punto6Es104Punto30() {
 		Circulo objCirculo=new Circulo(16.6);
-		double perimetroEsperado=865.67;
+		double perimetroEsperado=104.30;
 		double perimetroObtenido=objCirculo.calcularPerimetro();
 		
-		assertNotEquals(perimetroEsperado,perimetroObtenido,2);
+		assertEquals(perimetroEsperado,perimetroObtenido,0.01);
 				
 		
 	}
-	
-	// --- *** Tip de Ayuda Verde *** ---
 	
 	@Test
 	public void queElTipDeAyudaDeVerde(){ // :)
