@@ -10,7 +10,7 @@ public class CirculoTest {
 	public void crearUnCirculoConRadio2() {
 		double radioEsperado = 2;
 		Circulo obCirculo = new Circulo(2);
-		Double radioDeEsteTest = obCirculo.obtenerRadio();
+		double radioDeEsteTest = obCirculo.obtenerRadio();
 		assertEquals(radioEsperado,radioDeEsteTest,0);
 	}
 	
