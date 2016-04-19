@@ -1,7 +1,7 @@
 package ar.edu.unlam.tp1;
 
 public class Circulo {
-	private Double radio;
+	private double radio;
 	
 	public Circulo(double radio){
 		this.radio=radio;
